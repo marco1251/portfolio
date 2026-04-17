@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set base font and background */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #1e1e1e;
+  color: #f4f4f4;
+
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Header styling */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 60px;
+  padding: 15px 0;
+
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+/* Navigation links */
+nav a {
+  color: #f4f4f4;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+section {
+  margin-bottom: 70px;
+}
+
+section h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+/* Project Cards */
+.project-card {
+  display: flex;
+  gap: 20px;
+
+  background: #242424;
+  padding: 20px;
+  border-radius: 12px;
+
+  margin-bottom: 20px;
+
+  align-items: flex-start;
+}
+
+p {
+  color: #ccc;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Left media (image/video) */
+.project-media {
+  flex: 0 0 220px;
+}
+
+/* Media styling */
+.project-media img,
+.project-media iframe {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.project-media a img {
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.project-media a img:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+/* Right content */
+.project-content {
+  flex: 1;
+}
+
+/* Mobile fallback */
+@media (max-width: 700px) {
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-media {
+    flex: 1;
+  }
+}
+/* Hover effect */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Project images */
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Project links */
+.project-links {
+  margin-top: 15px;
+}
+
+.project-links a {
+  display: inline-block;
+  margin-right: 15px;
+  color: #4ea1ff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+
+#contact a {
+  color: #4ea1ff;
+  text-decoration: underline;
+}
