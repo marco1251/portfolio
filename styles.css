@@ -65,15 +65,15 @@ section h2 {
 /* Project Cards */
 .project-card {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
 
-  background: #242424;
+  gap: 15px;
+
+  background: #222;
   padding: 20px;
   border-radius: 12px;
 
   margin-bottom: 20px;
-
-  align-items: flex-start;
 }
 
 p {
@@ -82,17 +82,17 @@ p {
   margin-bottom: 10px;
 }
 
-/* Left media (image/video) */
+/* Media */
 .project-media {
-  flex: 0 0 220px;
+  width: 100%;
 }
 
-/* Media styling */
 .project-media img,
 .project-media iframe {
   width: 100%;
+  height: 450px;
+  object-fit: cover;
   border-radius: 8px;
-  display: block;
 }
 
 .project-media a img {
@@ -112,16 +112,6 @@ p {
   flex: 1;
 }
 
-/* Mobile fallback */
-@media (max-width: 700px) {
-  .project-card {
-    flex-direction: column;
-  }
-
-  .project-media {
-    flex: 1;
-  }
-}
 /* Hover effect */
 .project-card:hover {
   transform: translateY(-5px);
